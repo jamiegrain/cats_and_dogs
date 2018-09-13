@@ -26,7 +26,7 @@ model = tf.keras.models.load_model('cd_model.h5')
 predict_test = np.array(predict_test)
 predict_test = np.reshape(predict_test, (-1, IMG_SIZE, IMG_SIZE, 1))
 
-if model.predict(predict_test) == 1:
+if model.predict(predict_test) == 1: #Test should be a list
 	print('Cat')
 else:
-	print('Doggo')
+	print('Doggo') #Check categories
